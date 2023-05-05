@@ -1,0 +1,521 @@
+
+# text = Wer:<PRON> sind:<AUX> sie:<PRON> ?:<PUNCT>
+# analyses = 3
+# parsetree = (Utt (Utt (QS (IP Wer) (cop sind) (Comp (NP (Pron sie))))) (Punct '?'))
+# weight = 5.0000000000000016e-5
+1	Wer	_	PRON	_	_	3	nsubj	_	_
+2	sind	_	AUX	_	_	3	cop	_	_
+3	sie	_	PRON	_	_	0	root	_	_
+4	?	_	PUNCT	_	_	3	punct	_	_
+
+
+
+# text = Eine:<DET> kleine:<ADJ> Stadt:<NOUN> mit:<ADP> zwei:<NUM> Minaretten:<NOUN> gleitet:<VERB> vorbei:<ADV> .:<PUNCT>
+# analyses = 23
+# parsetree = (Utt (Utt (S (NP (NP (Det Eine) (CN (AP (A kleine)) (CN (N Stadt)))) (NP_obl (Prep mit) (NP (Num (Card zwei)) (NP (CN (N Minaretten)))))) (VP (VP (V gleitet)) (Adv vorbei)))) (Punct '.'))
+# weight = 1.5625000000000007e-11
+1	Eine	_	DET	_	_	3	det	_	_
+2	kleine	_	ADJ	_	_	3	amod	_	_
+3	Stadt	_	NOUN	_	_	7	nsubj	_	_
+4	mit	_	ADP	_	_	6	case	_	_
+5	zwei	_	NUM	_	_	6	nummod	_	_
+6	Minaretten	_	NOUN	_	_	3	nmod	_	_
+7	gleitet	_	VERB	_	_	0	root	_	_
+8	vorbei	_	ADV	_	_	7	advmod	_	_
+9	.	_	PUNCT	_	_	7	punct	_	_
+
+
+
+# text = Ich:<PRON> war:<AUX> nur:<ADV> ein:<DET> Junge:<NOUN> mit:<ADP> schlammigen:<ADJ> Schuhen:<NOUN> .:<PUNCT>
+# analyses = 21
+# parsetree = (Utt (Utt (QS (IP Ich) (cop war) (neg nur) (Comp (NP (NP (Det ein) (CN (N Junge))) (NP_obl (Prep mit) (NP (CN (AP (A schlammigen)) (CN (N Schuhen))))))))) (Punct '.'))
+# weight = 1.2500000000000009e-10
+1	Ich	_	PRON	_	_	5	nsubj	_	_
+2	war	_	AUX	_	_	5	cop	_	_
+3	nur	_	ADV	_	_	5	advmod	_	_
+4	ein	_	DET	_	_	5	det	_	_
+5	Junge	_	NOUN	_	_	0	root	_	_
+6	mit	_	ADP	_	_	8	case	_	_
+7	schlammigen	_	ADJ	_	_	8	amod	_	_
+8	Schuhen	_	NOUN	_	_	5	nmod	_	_
+9	.	_	PUNCT	_	_	5	punct	_	_
+
+
+
+# text = Die:<DET> Verkehrspolizei:<NOUN> von:<ADP> Shenzhen:<PROPN> hat:<AUX> sich:<PRON> für:<ADP> unkonventionelle:<ADJ> Strafen:<NOUN> entschieden:<VERB> .:<PUNCT>
+# analyses = 40
+# parsetree = (Utt (Utt (NP (NP (Det Die) (CN (N Verkehrspolizei))) (NP_obl (Prep von) (NP (NP (PN Shenzhen)) (SC (QS (do hat) (NP (NP (Pron sich)) (NP_obl (Prep für) (NP (CN (AP (A unkonventionelle)) (CN (N Strafen)))))) (VP (V entschieden)))))))) (Punct '.'))
+# weight = 7.812500000000006e-14
+1	Die	_	DET	_	_	2	det	_	_
+2	Verkehrspolizei	_	NOUN	_	_	0	root	_	_
+3	von	_	ADP	_	_	4	case	_	_
+4	Shenzhen	_	PROPN	_	_	2	nmod	_	_
+5	hat	_	AUX	_	_	10	aux	_	_
+6	sich	_	PRON	_	_	10	nsubj	_	_
+7	für	_	ADP	_	_	9	case	_	_
+8	unkonventionelle	_	ADJ	_	_	9	amod	_	_
+9	Strafen	_	NOUN	_	_	6	nmod	_	_
+10	entschieden	_	VERB	_	_	4	acl	_	_
+11	.	_	PUNCT	_	_	2	punct	_	_
+
+
+
+# text = Die:<DET> Erforschung:<NOUN> von:<ADP> Vulkanen:<NOUN> wird:<AUX> Vulkanologie:<NOUN> genannt:<VERB> ,:<PUNCT> manchmal:<ADV> auch:<ADV> als:<ADP> Vulkanologie:<NOUN> geschrieben:<VERB> .:<PUNCT>
+# analyses = 90
+# parsetree = (Utt (Utt (S (NP (NP (Det Die)) (SC (S_that (S (NP (NP (CN (N Erforschung))) (NP_obl (Prep von) (NP (CN (N Vulkanen))))) (cop wird) (Comp (NP (CN (N Vulkanologie)))))))) (VP (VP (VP (VP (V genannt)) (comma ',') (Adv manchmal)) (Adv auch)) (NP_obl (Prep als) (NP (NP (CN (N Vulkanologie))) (VP_pass (V2 geschrieben))))))) (Punct '.'))
+# weight = 1.9531250000000022e-23
+1	Die	_	DET	_	_	7	nsubj	_	_
+2	Erforschung	_	NOUN	_	_	6	nsubj	_	_
+3	von	_	ADP	_	_	4	case	_	_
+4	Vulkanen	_	NOUN	_	_	2	nmod	_	_
+5	wird	_	AUX	_	_	6	cop	_	_
+6	Vulkanologie	_	NOUN	_	_	1	acl	_	_
+7	genannt	_	VERB	_	_	0	root	_	_
+8	,	_	PUNCT	_	_	7	punct	_	_
+9	manchmal	_	ADV	_	_	7	advmod	_	_
+10	auch	_	ADV	_	_	7	advmod	_	_
+11	als	_	ADP	_	_	12	case	_	_
+12	Vulkanologie	_	NOUN	_	_	7	obl	_	_
+13	geschrieben	_	VERB	_	_	12	acl	_	_
+14	.	_	PUNCT	_	_	7	punct	_	_
+
+
+
+# text = Es:<PRON> wurde:<AUX> von:<ADP> April:<PROPN> bis:<ADP> Juni:<PROPN> vor:<ADP> der:<DET> mexikanischen:<ADJ> Küste:<NOUN> durchgeführt:<VERB> .:<PUNCT>
+# analyses = 149
+# parsetree = (Utt (Utt (S (SC (QS (IP Es) (cop wurde) (Comp (NP_obl (Prep von) (NP (NP (PN April)) (NP_obl (Prep bis) (NP (NP (PN Juni)) (NP_obl (Prep vor) (NP (Det der) (CN (AP (A mexikanischen)) (CN (N Küste)))))))))))) (VP (V durchgeführt)))) (Punct '.'))
+# weight = 1.5625000000000012e-14
+1	Es	_	PRON	_	_	4	nsubj	_	_
+2	wurde	_	AUX	_	_	4	cop	_	_
+3	von	_	ADP	_	_	4	case	_	_
+4	April	_	PROPN	_	_	11	csubj	_	_
+5	bis	_	ADP	_	_	6	case	_	_
+6	Juni	_	PROPN	_	_	4	nmod	_	_
+7	vor	_	ADP	_	_	10	case	_	_
+8	der	_	DET	_	_	10	det	_	_
+9	mexikanischen	_	ADJ	_	_	10	amod	_	_
+10	Küste	_	NOUN	_	_	6	nmod	_	_
+11	durchgeführt	_	VERB	_	_	0	root	_	_
+12	.	_	PUNCT	_	_	11	punct	_	_
+
+
+
+# text = ":<PUNCT> Ihre:<DET> Stimme:<NOUN> ging:<VERB> buchstäblich:<ADV> um:<ADP> die:<DET> Welt:<NOUN> ":<PUNCT> ,:<PUNCT> sagte:<VERB> Leive:<PROPN> .:<PUNCT>
+# analyses = 2
+# parsetree = (Chunks (S_front (quote '"') (S (NP (Det Ihre) (CN (N Stimme))) (VP (VP (VP (V ging)) (Adv buchstäblich)) (NP_obl (Prep um) (NP (Det die) (CN (N Welt)))))) (quote '"') (comma ',')) (Utt (Utt (Imp (VP (V2 sagte) (NP (PN Leive))))) (Punct '.')))
+# weight = 5.000000000000006e-21
+1	"	_	PUNCT	_	_	4	punct	_	_
+2	Ihre	_	DET	_	_	3	det	_	_
+3	Stimme	_	NOUN	_	_	4	nsubj	_	_
+4	ging	_	VERB	_	_	0	root	_	_
+5	buchstäblich	_	ADV	_	_	4	advmod	_	_
+6	um	_	ADP	_	_	8	case	_	_
+7	die	_	DET	_	_	8	det	_	_
+8	Welt	_	NOUN	_	_	4	obl	_	_
+9	"	_	PUNCT	_	_	4	punct	_	_
+10	,	_	PUNCT	_	_	4	punct	_	_
+11	sagte	_	VERB	_	_	4	dep	_	_
+12	Leive	_	PROPN	_	_	11	obj	_	_
+13	.	_	PUNCT	_	_	11	punct	_	_
+
+
+
+# text = Ein:<DET> Zeuge:<NOUN> sagte:<VERB> der:<DET> Polizei:<NOUN> ,:<PUNCT> dass:<SCONJ> das:<DET> Opfer:<NOUN> den:<DET> Verdächtigen:<NOUN> im:<_> in:<ADP> dem:<DET> April:<PROPN> angegriffen:<VERB> habe:<AUX> .:<PUNCT>
+# analyses = 6
+# parsetree = (Chunks (S_front (S (NP (Det Ein) (CN (N Zeuge))) (VP (V2 sagte) (NP (Det der) (CN (N Polizei))))) (comma ',')) (Subj dass) (Comp (NP (Det das) (CN (N Opfer)))) (Comp (NP (Det den) (CN (N Verdächtigen)))) (Str im) (NP_oblcomma (NP_obl (Prep in) (NP (NP (Det dem)) (SC (S_that (S (NP (NP (PN April)) (VP_pass (V2 angegriffen))) (VP (aux habe))))))) (comma '.')))
+# weight = 1.2500000000000016e-29
+1	Ein	_	DET	_	_	2	det	_	_
+2	Zeuge	_	NOUN	_	_	3	nsubj	_	_
+3	sagte	_	VERB	_	_	0	root	_	_
+4	der	_	DET	_	_	5	det	_	_
+5	Polizei	_	NOUN	_	_	3	obj	_	_
+6	,	_	PUNCT	_	_	3	punct	_	_
+7	dass	_	SCONJ	_	_	3	dep	_	_
+8	das	_	DET	_	_	9	det	_	_
+9	Opfer	_	NOUN	_	_	3	dep	_	_
+10	den	_	DET	_	_	11	det	_	_
+11	Verdächtigen	_	NOUN	_	_	3	dep	_	_
+12	im	_	X	_	_	3	dep	_	_
+13	in	_	ADP	_	_	14	case	_	_
+14	dem	_	DET	_	_	3	dep	_	_
+15	April	_	PROPN	_	_	17	nsubj	_	_
+16	angegriffen	_	VERB	_	_	15	acl	_	_
+17	habe	_	AUX	_	_	14	acl	_	_
+18	.	_	PUNCT	_	_	14	punct	_	_
+
+
+
+# text = Am:<_> An:<ADP> dem:<DET> offensichtlichsten:<ADJ> ist:<AUX> es:<PRON> ,:<PUNCT> wenn:<SCONJ> der:<DET> Name:<NOUN> eines:<DET> Prominenten:<NOUN> zunächst:<ADV> recht:<ADV> selten:<ADJ> ist:<AUX> .:<PUNCT>
+# analyses = 6
+# parsetree = (Chunks (Str Am) (Comp (NP_obl (Prep An) (NP (Det dem)))) (A offensichtlichsten) (Utt (Utt (Imp (cop ist) (Comp (NP (Pron es))))) (Punct ',')) (Subj wenn) (Utt (Utt (NP (NP (Det der) (CN (N Name))) (SC (S_that (S (NP (Det eines) (CN (CN (N Prominenten)) (AP (AdA zunächst) (AP (AdA recht) (AP (A selten)))))) (VP (aux ist))))))) (Punct '.')))
+# weight = 1.2500000000000016e-28
+1	Am	_	X	_	_	0	root	_	_
+2	An	_	ADP	_	_	3	case	_	_
+3	dem	_	DET	_	_	1	dep	_	_
+4	offensichtlichsten	_	ADJ	_	_	1	dep	_	_
+5	ist	_	AUX	_	_	6	cop	_	_
+6	es	_	PRON	_	_	1	dep	_	_
+7	,	_	PUNCT	_	_	6	punct	_	_
+8	wenn	_	SCONJ	_	_	1	dep	_	_
+9	der	_	DET	_	_	10	det	_	_
+10	Name	_	NOUN	_	_	1	dep	_	_
+11	eines	_	DET	_	_	12	det	_	_
+12	Prominenten	_	NOUN	_	_	16	nsubj	_	_
+13	zunächst	_	ADV	_	_	15	advmod	_	_
+14	recht	_	ADV	_	_	15	advmod	_	_
+15	selten	_	ADJ	_	_	12	amod	_	_
+16	ist	_	AUX	_	_	10	acl	_	_
+17	.	_	PUNCT	_	_	10	punct	_	_
+
+
+
+# text = Das:<PRON> hat:<AUX> die:<DET> Anleger:<NOUN> nicht:<PART> davon:<PRON> abgehalten:<VERB> ,:<PUNCT> in:<ADP> Scharen:<NOUN> in:<ADP> diese:<PRON> Fonds:<NOUN> zu:<PART> investieren:<VERB> .:<PUNCT>
+# analyses = 2
+# parsetree = (Chunks (NP_poss (NP (NP (Pron Das)) (SC (QS (cop hat) (NP (Det die)) (Comp (NP (CN (N Anleger))))))) ('s' nicht)) (Utt (Utt (NP (NP (NP (Pron davon)) (VP_pass (V2 abgehalten))) (comma ',') (NP_obl (Prep in) (NP (NP (CN (N Scharen))) (NP_obl (Prep in) (NP (NP (NP_poss (Pron_poss diese)) (CN (N Fonds))) (SC (VP_to (to zu) (VP (V investieren)))))))))) (Punct '.')))
+# weight = 1.9531250000000025e-26
+1	Das	_	PRON	_	_	0	root	_	_
+2	hat	_	AUX	_	_	4	cop	_	_
+3	die	_	DET	_	_	4	nsubj	_	_
+4	Anleger	_	NOUN	_	_	1	acl	_	_
+5	nicht	_	PART	_	_	1	case	_	_
+6	davon	_	PRON	_	_	1	dep	_	_
+7	abgehalten	_	VERB	_	_	6	acl	_	_
+8	,	_	PUNCT	_	_	6	punct	_	_
+9	in	_	ADP	_	_	10	case	_	_
+10	Scharen	_	NOUN	_	_	6	nmod	_	_
+11	in	_	ADP	_	_	13	case	_	_
+12	diese	_	PRON	_	_	13	nmod:poss	_	_
+13	Fonds	_	NOUN	_	_	10	nmod	_	_
+14	zu	_	PART	_	_	15	mark	_	_
+15	investieren	_	VERB	_	_	13	acl	_	_
+16	.	_	PUNCT	_	_	6	punct	_	_
+
+
+
+# text = Diese:<PRON> Diskrepanz:<NOUN> zwischen:<ADP> Wirtschaftsdaten:<NOUN> und:<CCONJ> politischer:<ADJ> Rhetorik:<NOUN> ist:<AUX> bekannt:<ADJ> -:<PUNCT> oder:<CCONJ> sollte:<AUX> es:<PRON> zumindest:<ADV> sein:<AUX> .:<PUNCT>
+# analyses = 8
+# parsetree = (Utt (Utt (S (ListS (S (NP (NP (NP_poss (Pron_poss Diese)) (CN (N Diskrepanz))) (NP_obl (Prep zwischen) (NP (ListNP (NP (CN (N Wirtschaftsdaten)))) (NP_conj (Conj und) (NP (CN (AP (A politischer)) (CN (N Rhetorik)))))))) (cop ist) (Comp (AP (A bekannt))))) (S_conj (comma '-') (Conj oder) (S (SC (QS (cop sollte) (NP (Pron es)) (Comp (Adv zumindest)))) (VP (aux sein)))))) (Punct '.'))
+# weight = 4.8828125000000063e-23
+1	Diese	_	PRON	_	_	2	nmod:poss	_	_
+2	Diskrepanz	_	NOUN	_	_	9	nsubj	_	_
+3	zwischen	_	ADP	_	_	4	case	_	_
+4	Wirtschaftsdaten	_	NOUN	_	_	2	nmod	_	_
+5	und	_	CCONJ	_	_	7	cc	_	_
+6	politischer	_	ADJ	_	_	7	amod	_	_
+7	Rhetorik	_	NOUN	_	_	4	conj	_	_
+8	ist	_	AUX	_	_	9	cop	_	_
+9	bekannt	_	ADJ	_	_	0	root	_	_
+10	-	_	PUNCT	_	_	15	punct	_	_
+11	oder	_	CCONJ	_	_	15	cc	_	_
+12	sollte	_	AUX	_	_	14	cop	_	_
+13	es	_	PRON	_	_	14	nsubj	_	_
+14	zumindest	_	ADV	_	_	15	csubj	_	_
+15	sein	_	AUX	_	_	9	conj	_	_
+16	.	_	PUNCT	_	_	9	punct	_	_
+
+
+
+# text = Die:<DET> Machbarkeitsstudie:<NOUN> schätzt:<VERB> ,:<PUNCT> dass:<SCONJ> die:<DET> Passagiere:<NOUN> etwa:<ADV> vier:<NUM> Minuten:<NOUN> brauchen:<VERB> würden:<AUX> ,:<PUNCT> um:<ADP> mit:<ADP> der:<DET> Gondel:<NOUN> den:<DET> Potomac:<PROPN> River:<PROPN> zu:<PART> überqueren:<VERB> .:<PUNCT>
+# analyses = 5
+# parsetree = (Chunks (S_front (S (S (NP (Det Die) (CN (N Machbarkeitsstudie))) (VP (V schätzt))) (S_sub (comma ',') (Subj dass) (S (NP (NP (Det die) (CN (N Passagiere))) (SC (S_that (S (NP (Predet etwa) (NP (Num (Card vier)) (NP (CN (N Minuten))))) (VP (V brauchen)))))) (VP (aux würden))))) (comma ',')) (Prep um) (Comp (NP_obl (Prep mit) (NP (Det der) (CN (N Gondel))))) (Comp (NP (Det den))) (Utt (Utt (NP (NP (PN (PN_one Potomac) (PN River))) (SC (VP_to (to zu) (VP (V überqueren)))))) (Punct '.')))
+# weight = 9.765625000000022e-35
+1	Die	_	DET	_	_	2	det	_	_
+2	Machbarkeitsstudie	_	NOUN	_	_	3	nsubj	_	_
+3	schätzt	_	VERB	_	_	0	root	_	_
+4	,	_	PUNCT	_	_	12	punct	_	_
+5	dass	_	SCONJ	_	_	12	mark	_	_
+6	die	_	DET	_	_	7	det	_	_
+7	Passagiere	_	NOUN	_	_	12	nsubj	_	_
+8	etwa	_	ADV	_	_	10	det:predet	_	_
+9	vier	_	NUM	_	_	10	nummod	_	_
+10	Minuten	_	NOUN	_	_	11	nsubj	_	_
+11	brauchen	_	VERB	_	_	7	acl	_	_
+12	würden	_	AUX	_	_	3	advcl	_	_
+13	,	_	PUNCT	_	_	3	punct	_	_
+14	um	_	ADP	_	_	3	dep	_	_
+15	mit	_	ADP	_	_	17	case	_	_
+16	der	_	DET	_	_	17	det	_	_
+17	Gondel	_	NOUN	_	_	3	dep	_	_
+18	den	_	DET	_	_	3	dep	_	_
+19	Potomac	_	PROPN	_	_	3	dep	_	_
+20	River	_	PROPN	_	_	19	flat	_	_
+21	zu	_	PART	_	_	22	mark	_	_
+22	überqueren	_	VERB	_	_	19	acl	_	_
+23	.	_	PUNCT	_	_	19	punct	_	_
+
+
+
+# text = Er:<PRON> sammelte:<VERB> Karten:<NOUN> und:<CCONJ> tauschte:<VERB> sie:<PRON> mit:<ADP> den:<DET> anderen:<ADJ> Jungen:<NOUN>
+# analyses = 11
+# parsetree = (Utt (QS (IP Er) (VP (ListVP (VP (V2 sammelte) (NP (CN (N Karten))))) (VP_conj (Conj und) (VP (V2 tauschte) (NP (NP (Pron sie)) (NP_obl (Prep mit) (NP (Det den) (CN (AP (A anderen)) (CN (N Jungen)))))))))))
+# weight = 1.562500000000001e-12
+1	Er	_	PRON	_	_	2	nsubj	_	_
+2	sammelte	_	VERB	_	_	0	root	_	_
+3	Karten	_	NOUN	_	_	2	obj	_	_
+4	und	_	CCONJ	_	_	5	cc	_	_
+5	tauschte	_	VERB	_	_	2	conj	_	_
+6	sie	_	PRON	_	_	5	obj	_	_
+7	mit	_	ADP	_	_	10	case	_	_
+8	den	_	DET	_	_	10	det	_	_
+9	anderen	_	ADJ	_	_	10	amod	_	_
+10	Jungen	_	NOUN	_	_	6	nmod	_	_
+
+
+
+# text = Auf:<ADP> dieses:<PRON> Verbrechen:<NOUN> steht:<VERB> eine:<DET> Strafe:<NOUN> von:<ADP> fünf:<NUM> Jahren:<NOUN> Gefängnis:<NOUN>
+# analyses = 21
+# parsetree = (Utt (S (NP_oblcomma (NP_obl (Prep Auf) (NP (Pron dieses)))) (S (NP (CN (N Verbrechen))) (VP (V2 steht) (NP (NP (Det eine) (CN (N Strafe))) (NP_obl (Prep von) (NP (Num (Card fünf)) (NP (CN (N (N_one Jahren) (N Gefängnis)))))))))))
+# weight = 3.9062500000000037e-13
+1	Auf	_	ADP	_	_	2	case	_	_
+2	dieses	_	PRON	_	_	4	nmod	_	_
+3	Verbrechen	_	NOUN	_	_	4	nsubj	_	_
+4	steht	_	VERB	_	_	0	root	_	_
+5	eine	_	DET	_	_	6	det	_	_
+6	Strafe	_	NOUN	_	_	4	obj	_	_
+7	von	_	ADP	_	_	10	case	_	_
+8	fünf	_	NUM	_	_	10	nummod	_	_
+9	Jahren	_	NOUN	_	_	10	compound	_	_
+10	Gefängnis	_	NOUN	_	_	6	nmod	_	_
+
+
+
+# text = Die:<DET> Nachricht:<NOUN> wurde:<AUX> in:<ADP> jedes:<PRON> Dorf:<NOUN> der:<DET> Provinz:<NOUN> getragen:<VERB>
+# analyses = 32
+# parsetree = (Utt (S (NP (Det Die) (CN (N Nachricht))) (cop wurde) (Comp (NP_obl (Prep in) (NP (NP (NP_poss (Pron_poss jedes)) (CN (N Dorf))) (RS (NP (Det der) (CN (N Provinz))) (VPSlash (V2 getragen))))))))
+# weight = 3.125000000000002e-11
+1	Die	_	DET	_	_	2	det	_	_
+2	Nachricht	_	NOUN	_	_	6	nsubj	_	_
+3	wurde	_	AUX	_	_	6	cop	_	_
+4	in	_	ADP	_	_	6	case	_	_
+5	jedes	_	PRON	_	_	6	nmod:poss	_	_
+6	Dorf	_	NOUN	_	_	0	root	_	_
+7	der	_	DET	_	_	8	det	_	_
+8	Provinz	_	NOUN	_	_	9	nsubj	_	_
+9	getragen	_	VERB	_	_	6	acl:relcl	_	_
+
+
+
+# text = Ich:<PRON> habe:<VERB> diese:<PRON> Gedanken:<NOUN> im:<_> in:<ADP> dem:<DET> Hinterkopf:<NOUN>
+# analyses = 3
+# parsetree = (Chunks (ListS (S (NP (Pron Ich)) (VP (V2 habe) (NP (NP_poss (Pron_poss diese)) (CN (N Gedanken)))))) (Str im) (Comp (NP_obl (Prep in) (NP (Det dem) (CN (N Hinterkopf))))))
+# weight = 1.250000000000001e-13
+1	Ich	_	PRON	_	_	2	nsubj	_	_
+2	habe	_	VERB	_	_	0	root	_	_
+3	diese	_	PRON	_	_	4	nmod:poss	_	_
+4	Gedanken	_	NOUN	_	_	2	obj	_	_
+5	im	_	X	_	_	2	dep	_	_
+6	in	_	ADP	_	_	8	case	_	_
+7	dem	_	DET	_	_	8	det	_	_
+8	Hinterkopf	_	NOUN	_	_	2	dep	_	_
+
+
+
+# text = Adam:<PROPN> wäre:<AUX> in:<ADP> das:<DET> ewige:<ADJ> Leben:<NOUN> hinübergetragen:<VERB> worden:<AUX>
+# analyses = 13
+# parsetree = (Utt (S (SC (S_that (S (SC (S_that (S (NP (PN Adam)) (cop wäre) (Comp (NP_obl (Prep in) (NP (Det das) (CN (AP (A ewige)) (CN (N Leben))))))))) (VP (V hinübergetragen))))) (VP (aux worden))))
+# weight = 3.906250000000002e-14
+1	Adam	_	PROPN	_	_	6	nsubj	_	_
+2	wäre	_	AUX	_	_	6	cop	_	_
+3	in	_	ADP	_	_	6	case	_	_
+4	das	_	DET	_	_	6	det	_	_
+5	ewige	_	ADJ	_	_	6	amod	_	_
+6	Leben	_	NOUN	_	_	7	csubj	_	_
+7	hinübergetragen	_	VERB	_	_	8	csubj	_	_
+8	worden	_	AUX	_	_	0	root	_	_
+
+
+
+# text = Die:<DET> Hülsen:<NOUN> waren:<AUX> verrottet:<ADJ> und:<CCONJ> mussten:<AUX> ersetzt:<VERB> werden:<AUX>
+# analyses = 3
+# parsetree = (Chunks (Comp (NP (NP (Det Die)) (SC (S_that (S (NP (CN (N Hülsen))) (cop waren) (Comp (AP (A verrottet)))))))) (Utt (Conj und) (Utt (Imp (do mussten) (VP (V ersetzt))))) (Imp (VP (aux werden))))
+# weight = 1.5625000000000013e-18
+1	Die	_	DET	_	_	0	root	_	_
+2	Hülsen	_	NOUN	_	_	4	nsubj	_	_
+3	waren	_	AUX	_	_	4	cop	_	_
+4	verrottet	_	ADJ	_	_	1	acl	_	_
+5	und	_	CCONJ	_	_	7	cc	_	_
+6	mussten	_	AUX	_	_	7	aux	_	_
+7	ersetzt	_	VERB	_	_	1	dep	_	_
+8	werden	_	AUX	_	_	1	dep	_	_
+
+
+
+# text = Sie:<PRON> war:<AUX> wütend:<ADJ> ,:<PUNCT> dass:<SCONJ> dieser:<PRON> Trottel:<NOUN> es:<PRON> wagte:<VERB> ,:<PUNCT> sie:<PRON> vor:<ADP> der:<DET> Klasse:<NOUN> lächerlich:<ADJ> zu:<PART> machen:<VERB> .:<PUNCT>
+# analyses = 3
+# parsetree = (Chunks (S_front (S (NP (Pron Sie)) (cop war) (Comp (AP (A wütend)))) (comma ',')) (Subj dass) (Utt (Utt (NP (NP (NP (NP (NP_poss (Pron_poss dieser)) (CN (N Trottel))) (SC (S_that (S (NP (Pron es)) (VP (V wagte)))))) (NP_appos (Punct_appos ',') (NP (Pron sie)))) (NP_obl (Prep vor) (NP (NP (Det der) (CN (CN (N Klasse)) (AP (A lächerlich)))) (SC (VP_to (to zu) (VP (V machen)))))))) (Punct '.')))
+# weight = 1.9531250000000026e-29
+1	Sie	_	PRON	_	_	3	nsubj	_	_
+2	war	_	AUX	_	_	3	cop	_	_
+3	wütend	_	ADJ	_	_	0	root	_	_
+4	,	_	PUNCT	_	_	3	punct	_	_
+5	dass	_	SCONJ	_	_	3	dep	_	_
+6	dieser	_	PRON	_	_	7	nmod:poss	_	_
+7	Trottel	_	NOUN	_	_	3	dep	_	_
+8	es	_	PRON	_	_	9	nsubj	_	_
+9	wagte	_	VERB	_	_	7	acl	_	_
+10	,	_	PUNCT	_	_	11	punct	_	_
+11	sie	_	PRON	_	_	7	appos	_	_
+12	vor	_	ADP	_	_	14	case	_	_
+13	der	_	DET	_	_	14	det	_	_
+14	Klasse	_	NOUN	_	_	7	nmod	_	_
+15	lächerlich	_	ADJ	_	_	14	amod	_	_
+16	zu	_	PART	_	_	17	mark	_	_
+17	machen	_	VERB	_	_	14	acl	_	_
+18	.	_	PUNCT	_	_	7	punct	_	_
+
+
+
+# text = Der:<DET> Erdrutschsieg:<NOUN> im:<_> in:<ADP> dem:<DET> Wahlmännerkollegium:<NOUN> verdeckte:<VERB> die:<DET> Knappheit:<NOUN> eines:<DET> Sieges:<NOUN> ,:<PUNCT> der:<PRON> auf:<ADP> nur:<ADV> 43:<NUM> %:<NUM> der:<DET> Stimmen:<NOUN> beruhte:<VERB>
+# analyses = 3
+# parsetree = (Chunks (Comp (NP (Det Der) (CN (N Erdrutschsieg)))) (Str im) (Comp (NP_obl (Prep in) (NP (NP (NP (Det dem)) (SC (S_that (S (NP (CN (N Wahlmännerkollegium))) (VP (V3 verdeckte) (NP (Det die) (CN (N Knappheit))) (NP (NP (Det eines) (CN (N Sieges))) (NP_appos (Punct_appos ',') (NP (Pron der))))))))) (NP_obl (Prep auf) (NP (Predet nur) (NP (Num (Card '43')) (NP (Num (Card '%')) (NP (NP (Det der)) (SC (S_that (S (NP (CN (N Stimmen))) (VP (V beruhte))))))))))))))
+# weight = 2.441406250000004e-32
+1	Der	_	DET	_	_	2	det	_	_
+2	Erdrutschsieg	_	NOUN	_	_	0	root	_	_
+3	im	_	X	_	_	2	dep	_	_
+4	in	_	ADP	_	_	5	case	_	_
+5	dem	_	DET	_	_	2	dep	_	_
+6	Wahlmännerkollegium	_	NOUN	_	_	7	nsubj	_	_
+7	verdeckte	_	VERB	_	_	5	acl	_	_
+8	die	_	DET	_	_	9	det	_	_
+9	Knappheit	_	NOUN	_	_	7	iobj	_	_
+10	eines	_	DET	_	_	11	det	_	_
+11	Sieges	_	NOUN	_	_	7	obj	_	_
+12	,	_	PUNCT	_	_	13	punct	_	_
+13	der	_	PRON	_	_	11	appos	_	_
+14	auf	_	ADP	_	_	18	case	_	_
+15	nur	_	ADV	_	_	18	det:predet	_	_
+16	43	_	NUM	_	_	18	nummod	_	_
+17	%	_	NUM	_	_	18	nummod	_	_
+18	der	_	DET	_	_	5	nmod	_	_
+19	Stimmen	_	NOUN	_	_	20	nsubj	_	_
+20	beruhte	_	VERB	_	_	18	acl	_	_
+
+
+
+# text = Die:<DET> Truppen:<NOUN> der:<DET> Vereinigten:<PROPN> Staaten:<PROPN> führen:<VERB> jetzt:<ADV> Atropin:<NOUN> und:<CCONJ> Autoinjektoren:<NOUN> in:<ADP> ihren:<DET> Erste:<ADJ> -:<PUNCT> Hilfe:<NOUN> -:<PUNCT> Kästen:<NOUN> mit:<ADP> sich:<PRON> ,:<PUNCT> die:<PRON> sie:<PRON> im:<_> in:<ADP> dem:<DET> Falle:<NOUN> einer:<DET> Vergiftung:<NOUN> mit:<ADP> Organophosphat:<NOUN> -:<PUNCT> Nervenstoffen:<NOUN> einsetzen:<VERB> können:<AUX>
+# analyses = 5
+# parsetree = (Chunks (Comp (NP (Det Die) (CN (N Truppen)))) (Comp (NP (NP (NP (NP (Det der)) (SC (S_that (S (NP (PN (PN_one Vereinigten) (PN Staaten))) (VP (V2C führen) (NP (NP (Predet jetzt) (NP (ListNP (NP (CN (N Atropin)))) (NP_conj (Conj und) (NP (CN (N Autoinjektoren)))))) (NP_obl (Prep in) (NP (Det ihren)))) (AP (A Erste))))))) (NP_appos (Punct_appos '-') (NP (NP (CN (N Hilfe))) (NP_appos (Punct_appos '-') (NP (CN (N Kästen))))))) (NP_obl (Prep mit) (NP (NP (Pron sich)) (NP_appos (Punct_appos ',') (NP (Pron die))))))) (Comp (NP (Pron sie))) (Str im) (Comp (NP_obl (Prep in) (NP (NP (Det dem)) (SC (S_that (S (NP (NP (CN (N Falle))) (SC (S_that (S (NP (NP (Det einer) (CN (N Vergiftung))) (NP_obl (Prep mit) (NP (NP (CN (N Organophosphat))) (NP_appos (Punct_appos '-') (NP (CN (N Nervenstoffen))))))) (VP (V einsetzen)))))) (VP (aux können)))))))))
+# weight = 1.192092895507816e-59
+1	Die	_	DET	_	_	2	det	_	_
+2	Truppen	_	NOUN	_	_	0	root	_	_
+3	der	_	DET	_	_	2	dep	_	_
+4	Vereinigten	_	PROPN	_	_	6	nsubj	_	_
+5	Staaten	_	PROPN	_	_	4	flat	_	_
+6	führen	_	VERB	_	_	3	acl	_	_
+7	jetzt	_	ADV	_	_	8	det:predet	_	_
+8	Atropin	_	NOUN	_	_	6	obj	_	_
+9	und	_	CCONJ	_	_	10	cc	_	_
+10	Autoinjektoren	_	NOUN	_	_	8	conj	_	_
+11	in	_	ADP	_	_	12	case	_	_
+12	ihren	_	DET	_	_	8	nmod	_	_
+13	Erste	_	ADJ	_	_	6	xcomp	_	_
+14	-	_	PUNCT	_	_	15	punct	_	_
+15	Hilfe	_	NOUN	_	_	3	appos	_	_
+16	-	_	PUNCT	_	_	17	punct	_	_
+17	Kästen	_	NOUN	_	_	15	appos	_	_
+18	mit	_	ADP	_	_	19	case	_	_
+19	sich	_	PRON	_	_	3	nmod	_	_
+20	,	_	PUNCT	_	_	21	punct	_	_
+21	die	_	PRON	_	_	19	appos	_	_
+22	sie	_	PRON	_	_	2	dep	_	_
+23	im	_	X	_	_	2	dep	_	_
+24	in	_	ADP	_	_	25	case	_	_
+25	dem	_	DET	_	_	2	dep	_	_
+26	Falle	_	NOUN	_	_	34	nsubj	_	_
+27	einer	_	DET	_	_	28	det	_	_
+28	Vergiftung	_	NOUN	_	_	33	nsubj	_	_
+29	mit	_	ADP	_	_	30	case	_	_
+30	Organophosphat	_	NOUN	_	_	28	nmod	_	_
+31	-	_	PUNCT	_	_	32	punct	_	_
+32	Nervenstoffen	_	NOUN	_	_	30	appos	_	_
+33	einsetzen	_	VERB	_	_	26	acl	_	_
+34	können	_	AUX	_	_	25	acl	_	_
+
+
+
+# text = Er:<PRON> kann:<AUX> auf:<ADP> lange:<ADJ> Sicht:<NOUN> mit:<ADP> List:<NOUN> und:<CCONJ> Tücke:<NOUN> erreichen:<VERB> ,:<PUNCT> was:<PRON> er:<PRON> auf:<ADP> kurze:<ADJ> Sicht:<NOUN> mit:<ADP> Zwang:<NOUN> und:<CCONJ> Gewalt:<NOUN> nicht:<PART> erreichen:<VERB> kann:<AUX>
+# analyses = 2065
+# parsetree = (Utt (S (NP (Pron Er)) (VP (VP (aux kann)) (NP_obl (Prep auf) (NP (NP (CN (AP (A lange)) (CN (N Sicht)))) (NP_obl (Prep mit) (NP (NP (NP (NP (ListNP (NP (CN (N List)))) (NP_conj (Conj und) (NP (CN (N Tücke))))) (VP_pass (V2 erreichen))) (NP_appos (Punct_appos ',') (NP (Pron was)))) (SC (S_that (S (NP (NP (Pron er)) (NP_obl (Prep auf) (NP (NP (CN (AP (A kurze)) (CN (N Sicht)))) (NP_obl (Prep mit) (NP (NP (ListNP (NP (CN (N Zwang)))) (NP_conj (Conj und) (NP (CN (N Gewalt))))) (SC (VP_to (to nicht) (VP (V erreichen))))))))) (VP (aux kann))))))))))))
+# weight = 4.768371582031258e-43
+1	Er	_	PRON	_	_	2	nsubj	_	_
+2	kann	_	AUX	_	_	0	root	_	_
+3	auf	_	ADP	_	_	5	case	_	_
+4	lange	_	ADJ	_	_	5	amod	_	_
+5	Sicht	_	NOUN	_	_	2	obl	_	_
+6	mit	_	ADP	_	_	7	case	_	_
+7	List	_	NOUN	_	_	5	nmod	_	_
+8	und	_	CCONJ	_	_	9	cc	_	_
+9	Tücke	_	NOUN	_	_	7	conj	_	_
+10	erreichen	_	VERB	_	_	7	acl	_	_
+11	,	_	PUNCT	_	_	12	punct	_	_
+12	was	_	PRON	_	_	7	appos	_	_
+13	er	_	PRON	_	_	23	nsubj	_	_
+14	auf	_	ADP	_	_	16	case	_	_
+15	kurze	_	ADJ	_	_	16	amod	_	_
+16	Sicht	_	NOUN	_	_	13	nmod	_	_
+17	mit	_	ADP	_	_	18	case	_	_
+18	Zwang	_	NOUN	_	_	16	nmod	_	_
+19	und	_	CCONJ	_	_	20	cc	_	_
+20	Gewalt	_	NOUN	_	_	18	conj	_	_
+21	nicht	_	PART	_	_	22	mark	_	_
+22	erreichen	_	VERB	_	_	18	acl	_	_
+23	kann	_	AUX	_	_	7	acl	_	_
+
+
+
+# text = Es:<PRON> wurde:<AUX> gesagt:<VERB> ,:<PUNCT> dass:<SCONJ> nur:<ADV> eine:<DET> hierarchische:<ADJ> Gesellschaft:<NOUN> mit:<ADP> einer:<DET> Freizeitklasse:<NOUN> an:<ADP> der:<DET> Spitze:<NOUN> Kunstwerke:<NOUN> hervorbringen:<VERB> kann:<AUX>
+# analyses = 1079
+# parsetree = (Utt (S (NP (Pron Es)) (have wurde) (VP (VS gesagt) (S_direct (colon ',') (S (SC (S_that (that dass) (S (NP (NP (Predet nur) (NP (Det eine) (CN (AP (A hierarchische)) (CN (N Gesellschaft))))) (NP_obl (Prep mit) (NP (NP (Det einer) (CN (N Freizeitklasse))) (NP_obl (Prep an) (NP (Det der) (CN (N (N_one Spitze) (N Kunstwerke)))))))) (VP (V hervorbringen))))) (VP (aux kann)))))))
+# weight = 1.5625000000000022e-23
+1	Es	_	PRON	_	_	3	nsubj	_	_
+2	wurde	_	AUX	_	_	3	aux	_	_
+3	gesagt	_	VERB	_	_	0	root	_	_
+4	,	_	PUNCT	_	_	18	punct	_	_
+5	dass	_	SCONJ	_	_	17	mark	_	_
+6	nur	_	ADV	_	_	9	det:predet	_	_
+7	eine	_	DET	_	_	9	det	_	_
+8	hierarchische	_	ADJ	_	_	9	amod	_	_
+9	Gesellschaft	_	NOUN	_	_	17	nsubj	_	_
+10	mit	_	ADP	_	_	12	case	_	_
+11	einer	_	DET	_	_	12	det	_	_
+12	Freizeitklasse	_	NOUN	_	_	9	nmod	_	_
+13	an	_	ADP	_	_	16	case	_	_
+14	der	_	DET	_	_	16	det	_	_
+15	Spitze	_	NOUN	_	_	16	compound	_	_
+16	Kunstwerke	_	NOUN	_	_	12	nmod	_	_
+17	hervorbringen	_	VERB	_	_	18	csubj	_	_
+18	kann	_	AUX	_	_	3	parataxis	_	_
+
+
+
+# text = Seine:<DET> einfallsreiche:<ADJ> Erklärung:<NOUN> ,:<PUNCT> dass:<SCONJ> er:<PRON> die:<DET> Kirche:<NOUN> nicht:<PART> angezündet:<VERB> hätte:<AUX> ,:<PUNCT> wenn:<SCONJ> er:<PRON> nicht:<PART> geglaubt:<VERB> hätte:<AUX> ,:<PUNCT> dass:<SCONJ> der:<DET> Bischof:<NOUN> in:<ADP> ihr:<PRON> sei:<VERB>
+# analyses = 3
+# parsetree = (Chunks (Utt (Utt (NP (Det Seine) (CN (AP (A einfallsreiche)) (CN (N Erklärung))))) (Punct ',')) (Subj dass) (Comp (NP (NP (Pron er)) (SC (S_that (S (S (NP (NP (Det die) (CN (N Kirche))) (SC (VP_to (to nicht) (VP (V angezündet))))) (VP (aux hätte))) (S_sub (comma ',') (Subj wenn) (S (S (NP (NP (Pron er)) (SC (VP_to (to nicht) (VP (V geglaubt))))) (VP (aux hätte))) (S_sub (comma ',') (Subj dass) (S (NP (NP (Det der) (CN (N Bischof))) (NP_obl (Prep in) (NP (Pron ihr)))) (VP (V sei))))))))))))
+# weight = 4.88281250000001e-38
+1	Seine	_	DET	_	_	3	det	_	_
+2	einfallsreiche	_	ADJ	_	_	3	amod	_	_
+3	Erklärung	_	NOUN	_	_	0	root	_	_
+4	,	_	PUNCT	_	_	3	punct	_	_
+5	dass	_	SCONJ	_	_	3	dep	_	_
+6	er	_	PRON	_	_	3	dep	_	_
+7	die	_	DET	_	_	8	det	_	_
+8	Kirche	_	NOUN	_	_	11	nsubj	_	_
+9	nicht	_	PART	_	_	10	mark	_	_
+10	angezündet	_	VERB	_	_	8	acl	_	_
+11	hätte	_	AUX	_	_	6	acl	_	_
+12	,	_	PUNCT	_	_	17	punct	_	_
+13	wenn	_	SCONJ	_	_	17	mark	_	_
+14	er	_	PRON	_	_	17	nsubj	_	_
+15	nicht	_	PART	_	_	16	mark	_	_
+16	geglaubt	_	VERB	_	_	14	acl	_	_
+17	hätte	_	AUX	_	_	11	advcl	_	_
+18	,	_	PUNCT	_	_	24	punct	_	_
+19	dass	_	SCONJ	_	_	24	mark	_	_
+20	der	_	DET	_	_	21	det	_	_
+21	Bischof	_	NOUN	_	_	24	nsubj	_	_
+22	in	_	ADP	_	_	23	case	_	_
+23	ihr	_	PRON	_	_	21	nmod	_	_
+24	sei	_	VERB	_	_	17	advcl	_	_
+
+
+
