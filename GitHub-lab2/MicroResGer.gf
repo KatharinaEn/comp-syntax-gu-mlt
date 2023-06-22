@@ -36,10 +36,10 @@ resource MicroResGer = {
 
  
     smartNoun : Str -> Gender -> Noun = \sg,g -> case sg of {
-      x + ("p" |"b" |"m" |"n" |"f" |"v" |"s" |"d" |"z" |"l" |"j" |"g" |"r" |"l") => mkNoun sg (sg +"s") sg sg (sg + "ä" + "e") (sg + "ä" + "e") (sg + "ä" + "en") (sg + "ä" + "e") g ; 
-      x + ("n" | "en" | "k" | "sch") => mkNoun sg (sg + "en") (sg+"en") (sg+"en")(sg+"en") (sg+"en")(sg+"en")(sg+"en") g ; 
+      x + ("p" |"b" |"m" |"f" |"v" |"s" | "z" |"l" |"j" |"g" |"l") => mkNoun sg (sg +"s") sg sg (sg + "ä" + "e") (sg + "ä" + "e") (sg + "ä" + "en") (sg + "ä" + "e") g ; 
+      x + ( "en" | "k" | "sch" | "u") => mkNoun sg (sg + "en") (sg+"en") (sg+"en")(sg+"en") (sg+"en")(sg+"en")(sg+"en") g ; 
       x + ("s") => mkNoun sg (sg + "s") sg sg (sg+ "s") (sg +"s") (sg +"s") (sg +"s") g ;
-      x + ("e"| "ch" | "t" ) => mkNoun sg (sg + "s") sg sg (sg + "e") (sg + "e") (sg + "en") (sg + "e") g ; 
+      x + ("e"| "ch" | "t" | "n" | "r" | "d" | "n" ) => mkNoun sg (sg + "s") sg sg (sg + "e") (sg + "e") (sg + "en") (sg + "e") g ; 
       _ => mkNoun sg (sg +"s") sg sg sg sg (sg + "n") sg g                 
     } ;
 
@@ -203,7 +203,7 @@ mkVerb2 : (inf, stem : Str) -> Verb
       Inf => inf ;
       VPresT P1 Sg => (stem + "e") ; -- ich wasche mich
       VPresT P2 Sg => (stem + "ä" + "st") ; -- du wäschst dich
-      VPresT P3 Sg => (stem + "ä" + "et") ;  -- er/sie/es wäscht sich 
+      VPresT P3 Sg => (stem + "ä" + "t") ;  -- er/sie/es wäscht sich 
       VPresT P1 Pl => (stem + "en") ; -- sie waschen sich
       VPresT P2 Pl => (stem + "ä" + "t") ; -- Sie/Er wäscht sich
       VPresT P3 Pl => (stem + "en") -- sie waschen sich 

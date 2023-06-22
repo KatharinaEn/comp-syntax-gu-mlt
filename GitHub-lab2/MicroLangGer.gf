@@ -31,16 +31,15 @@ concrete MicroLangGer of MicroLang = open MicroResGer in {
     UseV v = { verb = v ; compl = \\d,ng,c =>[] } ; -- sleep -- V -> VP
       
     
-    ComplV2 v2 np = { verb = v2 ; compl = \\d,ng,_ => v2.c } ;  -- V2 -> NP -> VP    -- love it -- Verb2 : Type = Verb ** {c : Str} ;
+    ComplV2 v2 np = { verb = v2 ; compl = \\d,ng,_ => v2.c ++ np.s ! Acc } ;  -- V2 -> NP -> VP    -- love it -- Verb2 : Type = Verb ** {c : Str} ;
   
 
     UseComp comp = { verb = be_Verb ; compl = \\d,ng,c => comp.s ! Pred ! ng ! c } ;  -- Comp  -> VP -- be_Verb -> Verb (Verb : Type = {s : VForm => Str}) -- VForm = Inf | VPresT Person Number
 
     CompAP ap = ap ; 
 
-    AdvVP vp adv =                --sleep here         -- VP -> Adv -> VP       
-      vp ** {Comp = \\a => vp.Comp ! a ++ adv.s} ;  
-
+  AdvVP vp adv = --sleep here         -- VP -> Adv -> VP       
+    vp ** {compl = \\d,g,c => vp.compl ! d ! g ! c ++ adv.s} ;
 
     DetCN det cn = {            -- Det -> CN -> NP ;
     s = \\c => det.s ! cn.g ! c ++ cn.s ! det.n ! c ;
@@ -183,32 +182,31 @@ lin bird_N = mkN "Vogel" "Vögel" Masc ;
 lin black_A = mkA "schwarz" ;
 lin blood_N = mkN "Blut" Neut ;
 lin blue_A = mkA "blau" ;
-lin boat_N = mkN "Boot" "Boote" Neut ;
+lin boat_N = mkN "Boot" Neut ;
 lin book_N = mkN "Buch" "Bücher" Neut ;
 lin boy_N = mkN "Junge" Masc ;
 lin bread_N = mkN "Brot" Neut ;
-lin break_V2 = mkV2 (mkV "brechen") "sich" ;
-lin buy_V2 = mkV2 (mkV "kaufen") "sich" ;
-lin car_N = mkN "Auto" "Autos" Neut ;
-lin cat_N = mkN "Katze" "Katzen" Fem ;
+lin buy_V2 = mkV2 (mkV "kaufen" "kaufen" "kaufe" "kaufst" "kauft" "kaufen" "kauft" "kaufen") ;
+lin car_N = mkN "Auto" Neut ;
+lin cat_N = mkN "Katze" Fem ;
 lin child_N = mkN "Kind" "Kinder" Neut ;
 lin city_N = mkN "Stadt" "Städte" Fem ;
 lin clean_A = mkA "sauber" ;
 lin clever_A = mkA "schlau" ;
-lin cloud_N = mkN "Wolke" "Wolken" Fem ;
+lin cloud_N = mkN "Wolke" Fem ;
 lin cold_A = mkA "kalt" ;
 lin come_V = mkV "kommen" ;
 lin computer_N = mkN "Computer" Masc ;
 lin cow_N = mkN "Kuh" "Kühe" Fem  ;
 lin dirty_A = mkA "schmutzig" ;
-lin dog_N = mkN "Hund" "Hunde" Masc ;
-lin drink_V2 = mkV2 (mkV "trinken") "sich" ;
-lin eat_V2 = mkV2 (mkV "essen") "sich" ;
-lin find_V2 = mkV2 (mkV "finden") "sich" ;
+lin dog_N = mkN "Hund" Masc ;
+lin drink_V2 = mkV2 (mkV "trinken" "trinken" "trinke" "trinkst" "trinkt" "trinken" "trinkt" "trinken") ;
+lin eat_V2 = mkV2 (mkV "essen" "essen" "esse" "isst" "isst" "essen" "esst" "essen") ;
+lin find_V2 = mkV2 (mkV "finden" "finden" "finde" "findest" "findet" "finden" "findet" "finden") ;
 lin fire_N = mkN "Feuer" Neut ;
-lin fish_N = mkN "Fisch" "Fische" Masc;
-lin flower_N = mkN "Blume" "Blumen" Fem ;
-lin friend_N = mkN "Freund" "Freunde" Masc ;
+lin fish_N = mkN "Fisch" Masc;
+lin flower_N = mkN "Blume" Fem ;
+lin friend_N = mkN "Freund" Masc ;
 lin girl_N = mkN "Mädchen" "Mädchen" Neut ;
 lin good_A = mkA "gut" ;
 lin go_V = mkV "gehen" "gehen" "gehe" "gehst" "geht" "gehen" "geht" "gehen" ;
@@ -220,11 +218,11 @@ lin hot_A = mkA "heiß" ;
 lin house_N = mkN "Haus" "Häuser" Neut ;
 -- lin john_PN = mkPN "John" ;
 lin jump_V = mkV "springen" "springen" "springe" "springst" "springt" "springen" "springt" "springen" ;
-lin kill_V2 = mkV2 (mkV "töten") "sich" ;
+lin kill_V2 = mkV2 (mkV "töten" "töten" "töte" "tötest" "tötet" "töten" "tötet" "töten") ;
 -- lin know_VS = mkVS (mkV "wissen") ;
 lin language_N = mkN "Sprache" Fem ;
 lin live_V = mkV "leben" ;
-lin love_V2 = mkV2 (mkV "lieben") "sich" ;
+lin love_V2 = mkV2 (mkV "lieben" "lieben" "liebe" "liebst" "liebt" "lieben" "liebt" "lieben")  ;
 lin man_N = mkN "Mann" "Männer" Masc;
 lin milk_N = mkN "Milch" Fem ;
 lin music_N = mkN "Musik" Fem ;
@@ -233,31 +231,31 @@ lin now_Adv = mkAdv "jetzt" ;
 lin old_A = mkA "alt" ;
 -- lin paris_PN = mkPN "Paris" ;
 lin play_V = mkV "spielen" ;
-lin read_V2 = mkV2 (mkV "lesen") "sich" ;
+lin read_V2 = mkV2 (mkV "lesen" "lesen" "lese" "liest" "liest" "lesen" "lest" "lesen") ;
 lin ready_A = mkA "bereit" ;
 lin red_A = mkA "rot" ;
 lin river_N = mkN "Fluss" "Flüsse" Masc ;
 lin run_V = mkV "laufen" ;
 lin sea_N = mkN "Meer" Neut ;
-lin see_V2 = mkV2 (mkV "sehen") "sich" ;
+lin see_V2 = mkV2 (mkV "sehen" "sehe" "siehst" "sieht" "sehen" "sehen" "seht" "sehen") ;
 lin ship_N = mkN "Schiff" Neut ;
 lin sleep_V = mkV "schlafen" ;
 lin small_A = mkA "klein" ;
 lin star_N = mkN "Stern" Masc;
 lin swim_V = mkV "schwimmen" ;
-lin teach_V2 = mkV2 (mkV "lehren") "sich" ;
---lin teach_V2 = mkV2 (mkV "lehren") "sich" ;
+lin teach_V2 = mkV2 (mkV "lehren") ;
+--lin teach_V2 = mkV2 (mkV "lehren") ;
 lin train_N = mkN "Zug" "Züge" Masc ;
 lin travel_V = mkV "reisen" ;
 lin tree_N = mkN "Baum" "Bäume" Masc ;
 lin understand_V2 = mkV2 (mkV "verstehen") "sich" ;
-lin wait_V2 = mkV2 "warten" "auf" ;
+lin wait_V2 = mkV2 (mkV "warten" "warte" "wartest" "wartet" "warten" "wartet" "warten" "auf") "auf" ;
 lin walk_V = mkV "gehen" ;
 lin warm_A = mkA "warm" ;
 lin water_N = mkN "Wasser" Neut ;
 lin white_A = mkA "weiß" ;
 lin wine_N = mkN "Wein" Masc ;
-lin woman_N = mkN "Frau" "Frauen" Fem ;
+lin woman_N = mkN "Frau" Fem ;
 lin yellow_A = mkA "gelb" ;
 lin young_A = mkA "jung" ;
 
