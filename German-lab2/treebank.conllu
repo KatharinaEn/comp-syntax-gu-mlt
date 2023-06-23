@@ -1,0 +1,113 @@
+                              
+         *  *  *              
+      *           *           
+    *               *         
+   *                          
+   *                          
+   *        * * * * * *       
+   *        *         *       
+    *       * * * *  *        
+      *     *      *          
+         *  *  *              
+                              
+This is GF version 3.11.0. 
+Built on darwin/x86_64 with ghc-8.6, flags: interrupt server c-runtime
+License: see help -license.   
+
+- compiling MicroResGer.gf...   write file MicroResGer.gfo
+- compiling MicroLangGer.gf...   write file MicroLangGer.gfo
+linking ... OK
+
+Languages: MicroLangGer
+MicroLang> 1	das	the_Det	DET	Det	Det-8	3	det	_	_
+2	schwarzes	black_A	ADJ	A	A-8	3	amod	_	_
+3	Brot	bread_N	NOUN	N	N-0	4	nsubj	_	_
+4	geht	walk_V	VERB	V	V-5	0	root	_	_
+
+1	sie	she_Pron	PRON	Pron	Pron-0	2	nsubj	_	_
+2	spielt	play_V	VERB	V	V-5	0	root	_	_
+3	jetzt	now_Adv	ADV	Adv	Adv-0	2	advmod	_	_
+
+1	die	thePl_Det	DET	Det	Det-8	2	det	_	_
+2	Pferde	horse_N	NOUN	N	N-4	4	nsubj	_	_
+3	sind	UseComp	VP	VP	VP-70	4	dep	_	_
+4	schmutzig	dirty_A	ADJ	A	A-48	0	root	_	_
+
+1	das	the_Det	DET	Det	Det-8	3	det	_	_
+2	blaues	blue_A	ADJ	A	A-8	3	amod	_	_
+3	Bier	beer_N	NOUN	N	N-0	5	nsubj	_	_
+4	ist	UseComp	VP	VP	VP-69	5	dep	_	_
+5	schwarz	black_A	ADJ	A	A-48	0	root	_	_
+
+1	sie	they_Pron	PRON	Pron	Pron-0	2	nsubj	_	_
+2	leben	live_V	VERB	V	V-6	0	root	_	_
+
+1	Auto	car_N	NOUN	N	N-4	2	nsubj	_	_
+2	schlafen	sleep_V	VERB	V	V-6	0	root	_	_
+
+1	er	he_Pron	PRON	Pron	Pron-0	2	nsubj	_	_
+2	reist	travel_V	VERB	V	V-5	0	root	_	_
+
+1	grüne	green_A	ADJ	A	A-12	2	amod	_	_
+2	Blute	blood_N	NOUN	N	N-4	3	nsubj	_	_
+3	lieben	love_V2	VERB	V2	V2-6	0	root	_	_
+4	Freunde	friend_N	NOUN	N	N-7	3	obj	_	_
+
+1	er	he_Pron	PRON	Pron	Pron-0	2	nsubj	_	_
+2	geht	walk_V	VERB	V	V-5	0	root	_	_
+
+1	die	thePl_Det	DET	Det	Det-0	2	det	_	_
+2	Männer	man_N	NOUN	N	N-4	3	nsubj	_	_
+3	schwimmen	swim_V	VERB	V	V-6	0	root	_	_
+4	schon	already_Adv	ADV	Adv	Adv-0	3	advmod	_	_
+
+1	er	he_Pron	PRON	Pron	Pron-0	2	nsubj	_	_
+2	versteht	understand_V2	VERB	V2	V2-5	0	root	_	_
+3	sich	understand_V2	VERB	V2	V2-7	2	dep	_	_
+4	einen	a_Det	DET	Det	Det-3	5	det	_	_
+5	Baum	tree_N	NOUN	N	N-3	2	obj	_	_
+
+1	er	he_Pron	PRON	Pron	Pron-0	2	nsubj	_	_
+2	kommt	come_V	VERB	V	V-5	0	root	_	_
+3	jetzt	now_Adv	ADV	Adv	Adv-0	2	advmod	_	_
+4	schon	already_Adv	ADV	Adv	Adv-0	2	advmod	_	_
+
+1	er	he_Pron	PRON	Pron	Pron-0	3	nsubj	_	_
+2	ist	UseComp	VP	VP	VP-69	3	dep	_	_
+3	blau	blue_A	ADJ	A	A-48	0	root	_	_
+
+1	sie	she_Pron	PRON	Pron	Pron-0	2	nsubj	_	_
+2	schwimmt	swim_V	VERB	V	V-5	0	root	_	_
+
+1	ein	a_Det	DET	Det	Det-8	2	det	_	_
+2	Brot	bread_N	NOUN	N	N-0	3	nsubj	_	_
+3	springt	jump_V	VERB	V	V-5	0	root	_	_
+
+1	der	the_Det	DET	Det	Det-0	3	det	_	_
+2	neuer	new_A	ADJ	A	A-0	3	amod	_	_
+3	Mann	man_N	NOUN	N	N-0	4	nsubj	_	_
+4	versteht	understand_V2	VERB	V2	V2-5	0	root	_	_
+5	sich	understand_V2	VERB	V2	V2-7	4	dep	_	_
+6	sie	she_Pron	PRON	Pron	Pron-3	4	obj	_	_
+
+1	sie	she_Pron	PRON	Pron	Pron-0	2	nsubj	_	_
+2	trinkt	drink_V2	VERB	V2	V2-5	0	root	_	_
+3	sie	she_Pron	PRON	Pron	Pron-3	2	obj	_	_
+
+1	ein	a_Det	DET	Det	Det-8	3	det	_	_
+2	schweres	heavy_A	ADJ	A	A-8	3	amod	_	_
+3	Auto	car_N	NOUN	N	N-0	4	nsubj	_	_
+4	schwimmt	swim_V	VERB	V	V-5	0	root	_	_
+5	mit	with_Prep	ADP	Prep	Prep-0	4	dep	_	_
+
+1	Züge	train_N	NOUN	N	N-4	2	nsubj	_	_
+2	essen	eat_V2	VERB	V2	V2-6	0	root	_	_
+3	ihn	he_Pron	PRON	Pron	Pron-3	2	obj	_	_
+
+1	schlaue	clever_A	ADJ	A	A-12	2	amod	_	_
+2	Kinder	child_N	NOUN	N	N-4	3	nsubj	_	_
+3	spielen	play_V	VERB	V	V-6	0	root	_	_
+
+10 msec
+MicroLang> See you.
+0 msec
