@@ -1,0 +1,210 @@
+-- utterances and sentences
+Utt ::= Utt Punct        # head punct
+Utt ::= Conj Utt         # cc head
+Utt ::= NP_obl comma Utt # cc punct head
+Utt ::= parenth Utt parenth # punct head punct
+
+Utt ::= S
+Utt ::= QS
+Utt ::= Imp
+Utt ::= NP
+Utt ::= AP
+Utt ::= IP
+Utt ::= IAdv
+Utt ::= Num
+
+-- sentences
+S ::= NP VP # nsubj head
+S ::= NP VP neg # nsubj advmod head
+S ::= NP have neg? VP  # nsubj aux advmod head
+S ::= NP cop neg? AdV? Comp # nsubj cop advmod advmod head
+S ::= NP cop neg? AdV? AdV? # head cop aux:pass advmod advmod
+S ::= there be_V  neg? AdV? NP # expl head advmod advmod nsubj
+S ::= it cop neg? AdV?  AP # expl cop advmod advmod head
+S ::= NP be_V neg? SC # nsubj head advmod ccomp
+S ::= S_front NP VS # parataxis nsubj head
+
+
+QS ::= aux NP neg? VP have? # aux nsubj advmod head advmod
+QS ::= cop NP neg? Comp # cop nsubj advmod head
+QS ::= cop NP neg? VP_pass # aux:pass nsubj:pass advmod head
+QS ::= IP neg VP # nsubj advmod head
+QS ::= IP have? neg? VP # nsubj advmod aux head
+QS ::= IP cop neg? Comp # nsubj cop advmod head
+QS ::= IP have? NP neg? VPSlash # obj nsubj advmod aux head
+QS ::= IP cop neg? VP_pass # nsubj:pass aux:pass advmod head
+QS ::= IAdv do NP neg? VP # advmod aux nsubj advmod head
+QS ::= IAdv cop NP neg? VP_pass # advmod aux:pass nsubj:pass advmod head
+
+
+-- indirect questions
+QS ::= IP does? NP neg? VPSlash # obj nsubj nsubj advmod head
+QS ::= IAdv NP do? neg? VP # advmod nsubj aux advmod head
+QS ::= IAdv have? NP neg? VP # advmod nsubj advmod aux head
+QS ::= IAdv cop NP neg? Comp # advmod nsubj cop advmod head
+RS ::= RP neg? VP have # nsubj aux advmod head
+RS ::= RP NP neg? Comp cop # nsubj cop nsubj advmod head
+RS ::= RP NP neg VPSlash # obj nsubj advmod head
+RS ::= NP neg VPSlash do  # nsubj aux advmod head
+
+
+-- imperatives
+Imp ::= do? neg? NP # aux advmod head
+
+
+-- sentences with adverbials
+S  ::= S_subcomma S # advcl head
+S  ::= S S_sub # head advcl
+S  ::= Adv_comma S # advmod head
+S  ::= NP_oblcomma S # nmod head
+
+-- embedded sentences
+SC ::= S_that
+SC ::= QS
+SC ::= VP_to
+
+
+VP ::= V
+VP ::= aux # # 0.001
+VP ::= NP V2  # head obj
+VP ::= V3 NP NP # head iobj obj
+VP ::= VS S_that # head ccomp
+VP ::= VV VP_to # head xcomp
+VP ::= V2V NP VP_to # head obj xcomp
+VP ::= AdV VP # advmod head 
+VP ::= VP NP_obl # head obl # 0.001
+VP_pass ::= V2
+VP_pass ::= VP_pass NP_obl # head nmod
+VPSlash ::= V2
+VPSlash ::= VPSlash NP_obl  # head obl # 0.001
+VPSlash ::= VP Prep # head case # 0.001
+
+
+S_that ::= that? S # mark head
+S_front  ::= S comma # head punct
+S_front  ::= quote S quote comma # punct head punct punct
+
+Comp ::= AP
+Comp ::= NP
+Comp ::= Adv
+Comp ::= Comp comma? NP_obl # head punct nmod
+Comp ::= Comp comma? Adv # head punct advmod
+
+-- VP with to
+VP_to ::= neg? to VP # advmod mark head
+VP_to ::= cop neg? to Comp # advmod mark cop head
+
+-- noun phrases
+NP ::= PN
+NP ::= Pron
+NP ::= Num # # 0.1
+NP ::= Det # # 0.1
+NP ::= Det? CN # det head
+NP ::= NP comma? NP_obl # head punct nmod
+NP ::= Predet NP # det:predet head
+NP ::= NP_poss CN # nmod:poss head
+NP ::= Num NP # nummod head
+NP ::= N PN # head flat
+NP ::= Symb Num # head nummod
+NP_poss ::= Pron_poss
+NP ::= NP comma? S_sub # head punct acl
+NP ::= NP comma? RS # head punct acl:relcl
+NP ::= NP comma? VP_pass # head punct acl # 0.01
+
+-- some very special rules ---
+NP        ::= Det CN_quoted # det head
+CN_quoted ::= quote CN quote # punct head punct
+Num ::= Card
+Num ::= Digits
+
+CN ::= N
+CN ::= AP CN # amod head
+PN ::= PN_one PN # head flat
+N ::= N_one N # compound head
+N ::= PN CN # compound head
+Card ::= Card_one Card # compound head
+IP ::= IDet CN # det head
+
+-- adjectival phrases
+AP ::= A
+AP ::= AdA AP     # advmod head
+AP ::= AP NP_obl  # head nmod
+
+
+
+
+
+-- POS tag configurations
+#pos AUX cop do have aux
+#pos VERB V V2 V3 VS VV V2V V2C be_V
+#pos NOUN N N_one
+#pos ADJ A
+#pos PROPN PN PN_one
+#pos ADV Adv IAdv AdA AdV Predet neg
+#pos SCONJ Subj that if
+#pos CCONJ Conj Conj_pre
+#pos DET Det IDet
+#pos PRON Pron IP RP Pron_poss there it
+#pos PART to 's
+#pos PUNCT Punct Punct_appos comma quote colon parenth
+#pos NUM Card Digits Card_one
+#pos ADP Prep
+#pos SYM Symb
+
+-- structural word lexicon: normal categories
+#token Prep at from in of on to with than auf von in zu mit dann
+#token IP who whom what wer was
+#token IAdv when where why wann wo warum 
+#token AdA very too genetically sehr zu genetisch
+#token AdV definitely always never auf jeden Fall immer nie
+#token Det a an the every some many noein der die das immer ein paar viele keine
+#token Pron I me you he him she her it we us they them ich du er sie es wir ihr sie
+#token Subj if when although because as wenn obwohl weil als
+#token aux can could must will would shall should kann könnte müssen wollen würden sollen sind 
+#token Punct . ! ?
+#token Punct_appos , :
+#token Conj and or nor und oder nicht
+#token Conj_pre both either neither beide ein oder andere nichts
+#token IDet which welches
+#token Pron_poss my your his her its our their meins deins seins ihres unseres ihres
+#token RP that who das wer
+#token Card five fünf
+
+-- structural word lexicon: syncategorematic words
+#token cop am is are was were be been being sein bin bist war waren 
+#token be_V is are was were be been being sind war waren 
+#token do do does did machen macht machte 
+#token have have has had haben hat hatte 
+#token neg not n't nicht 
+#token that that das 
+#token to to zu 
+#token it it es
+#token if if whether wenn ob 
+#token there there dort
+#token comma ,
+#token colon :
+#token quote "
+#token 's 's
+#token parenth ( ) [ ]
+
+-- content word lexicon
+#token PN John Mary
+#token V sleeps sleep slept walk walks walked sing sings sang sung move moves moved happen happens happened leave leaves left run runs ran schläft schlafe schlief gehen geht ging singen sint sang gesungen sich bewegen sich bewegt hatte sich bewegt passieren passiert passierte verlassen verlässt hat verlassen rennen rennt gerannt
+#token V2 sees see saw seen love loves loved look looks give gives gave concern concerns concerned make makes made decide decided sehen sah gesehen lieben liebt geliebt schauen schaut geben giebt gegeben betreffen betrifft betraf machen machte gemacht entscheiden entschieden 
+#token V2 know knows knew known wissen weiß wusste gewusst 
+#token V3 give gives gave geben gibt gegeben
+#token V2C call calls called consider considers considered anrufen ruft an rief an beachten beachtet beachtete
+#token V2V see sees saw consider considers considered stop stops stopped sehen sah gesehen beachten beachtet beachtete stoppen stoppt gestoppt 
+#token VS say says said believe believes sagen sagte gesagt glauben glaubte geglaubt 
+#token VV want wants try tries wollen will probieren probiert 
+#token A old good curious black best cold modified tired bad large larger alt gut neugierig schwarz am besten kalt modifiziert müde schlecht groß größer 
+#token N love sleep loves sleeps man men woman women cat cats doctor beer world elephant room hint hints reason reasons loser losers movie life Liebe Schlaf liebt schläft Mann Männer Frau Frauen Katze Katzen Doktor Welt Elefant Raum Hinweis Hinweise Grund Gründe Verlierer Film Leben 
+#token N house president moon Earth girl girls wine beer Haus Präsident Mond Erde Mädchen Wein Bier
+#token Adv now today here before there yesterday tomorrow always jetzt heute hier bevor dort gestern morgen immer 
+#token Predet probably only eher nicht 
+#token Symb $
+
+
+
+
+

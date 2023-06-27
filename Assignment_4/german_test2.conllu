@@ -1,0 +1,58 @@
+# text = Wer:<PRON> sind:<AUX> sie:<PRON> ?:<PUNCT>
+# analyses = 4
+# parsetree = (Utt (Utt (S (there Wer) (be_V sind) (NP (Pron sie)))) (Punct '?'))
+# weight = 1.0000000000000003e-4
+1	Wer	_	PRON	_	_	2	expl	_	_
+2	sind	_	VERB	_	_	0	root	_	_
+3	sie	_	PRON	_	_	2	nsubj	_	_
+4	?	_	PUNCT	_	_	2	punct	_	_
+
+
+
+# text = Eine:<DET> kleine:<ADJ> Stadt:<NOUN> mit:<ADP> zwei:<NUM> Minaretten:<NOUN> gleitet:<VERB> vorbei:<ADV> .:<PUNCT>
+# analyses = 29
+# parsetree = (Utt (Utt (S (NP (NP (Det Eine) (CN (AP (A kleine)) (CN (N Stadt)))) (NP_obl (Prep mit) (NP (Num (Card zwei)) (NP (CN (N Minaretten)))))) (VP (VP (V gleitet)) (Adv vorbei)))) (Punct '.'))
+# weight = 1.5625000000000007e-11
+1	Eine	_	DET	_	_	3	det	_	_
+2	kleine	_	ADJ	_	_	3	amod	_	_
+3	Stadt	_	NOUN	_	_	7	nsubj	_	_
+4	mit	_	ADP	_	_	6	case	_	_
+5	zwei	_	NUM	_	_	6	nummod	_	_
+6	Minaretten	_	NOUN	_	_	3	nmod	_	_
+7	gleitet	_	VERB	_	_	0	root	_	_
+8	vorbei	_	ADV	_	_	7	advmod	_	_
+9	.	_	PUNCT	_	_	7	punct	_	_
+
+
+
+# text = Ich:<PRON> war:<AUX> nur:<ADV> ein:<DET> Junge:<NOUN> mit:<ADP> schlammigen:<ADJ> Schuhen:<NOUN> .:<PUNCT>
+# analyses = 14
+# parsetree = (Utt (Utt (S (there Ich) (be_V war) (neg nur) (NP (NP (Det ein) (CN (N Junge))) (NP_obl (Prep mit) (NP (CN (AP (A schlammigen)) (CN (N Schuhen)))))))) (Punct '.'))
+# weight = 2.5000000000000017e-10
+1	Ich	_	PRON	_	_	2	expl	_	_
+2	war	_	VERB	_	_	0	root	_	_
+3	nur	_	ADV	_	_	2	aux	_	_
+4	ein	_	DET	_	_	5	det	_	_
+5	Junge	_	NOUN	_	_	2	nsubj	_	_
+6	mit	_	ADP	_	_	8	case	_	_
+7	schlammigen	_	ADJ	_	_	8	amod	_	_
+8	Schuhen	_	NOUN	_	_	5	nmod	_	_
+9	.	_	PUNCT	_	_	2	punct	_	_
+
+
+
+# text = Die:<DET> Verkehrspolizei:<NOUN> von:<ADP> Shenzhen:<PROPN> hat:<AUX> sich:<PRON> für:<ADP> unkonventionelle:<ADJ> Strafen:<NOUN> entschieden:<VERB> .:<PUNCT>
+# analyses = 68
+# parsetree = (Utt (Utt (S (SC (QS (NP (NP (Det Die) (CN (N Verkehrspolizei))) (NP_obl (Prep von) (NP (PN Shenzhen)))) (have hat) (VP (VP (V sich)) (Adv (Prep für) (NP (CN (AP (A unkonventionelle)) (CN (N Strafen)))))))) (VP (V entschieden)))) (Punct '.'))
+# weight = 7.812500000000008e-14
+1	Die	_	DET	_	_	2	det	_	_
+2	Verkehrspolizei	_	NOUN	_	_	6	nsubj	_	_
+3	von	_	ADP	_	_	4	case	_	_
+4	Shenzhen	_	PROPN	_	_	2	nmod	_	_
+5	hat	_	AUX	_	_	6	advmod	_	_
+6	sich	_	VERB	_	_	10	csubj	_	_
+7	für	_	ADP	_	_	9	case	_	_
+8	unkonventionelle	_	ADJ	_	_	9	amod	_	_
+9	Strafen	_	NOUN	_	_	6	advmod	_	_
+10	entschieden	_	VERB	_	_	0	root	_	_
+11	.	_	PUNCT	_	_	10	punct	_	_

@@ -1,0 +1,44 @@
+# sent_id = 1
+# text = Wer sind sie?
+1	Wer	Wer	PRON	PWS	Case=Nom|Number=Sing|Person=3|PronType=Int	0	root	_	TokenRange=0:3
+2	sind	sein	AUX	VAFIN	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	cop	_	TokenRange=4:8
+3	sie	sie	PRON	PPER	Case=Nom|Number=Plur|Person=3|PronType=Prs	1	nsubj	_	SpaceAfter=No|TokenRange=9:12
+4	?	?	PUNCT	$.	PunctType=Peri	1	punct	_	SpacesAfter=\r\n|TokenRange=12:13
+
+# sent_id = 2
+# text = Eine kleine Stadt mit zwei Minaretten gleitet vorbei.
+1	Eine	Eine	DET	ART	Case=Nom|Gender=Fem|Number=Sing|PronType=Art	3	det	_	TokenRange=15:19
+2	kleine	klein	ADJ	ADJA	Degree=Pos|Gender=Fem|Number=Sing	3	amod	_	TokenRange=20:26
+3	Stadt	Stadt	NOUN	NN	Gender=Fem|Number=Sing|Person=3	7	nsubj	_	TokenRange=27:32
+4	mit	mit	ADP	APPR	AdpType=Prep|Case=Dat	6	case	_	TokenRange=33:36
+5	zwei	zwei	NUM	CARD	Number=Plur|NumType=Card|Person=3	6	nummod	_	TokenRange=37:41
+6	Minaretten	Minarette	NOUN	NN	Gender=Fem|Number=Plur|Person=3	3	nmod	_	TokenRange=42:52
+7	gleitet	gleiten	VERB	VVFIN	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	TokenRange=53:60
+8	vorbei	vorbei	ADP	PTKVZ	PartType=Vbp	7	compound:prt	_	SpaceAfter=No|TokenRange=61:67
+9	.	.	PUNCT	$.	PunctType=Peri	7	punct	_	SpacesAfter=\r\n|TokenRange=67:68
+
+# sent_id = 3
+# text = Ich war nur ein Junge mit schlammigen Schuhen.
+1	Ich	Ich	PRON	PPER	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	TokenRange=70:73
+2	war	sein	AUX	VAFIN	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	5	cop	_	TokenRange=74:77
+3	nur	nur	ADV	ADV	_	5	advmod	_	TokenRange=78:81
+4	ein	ein	DET	ART	Case=Nom|Gender=Masc|Number=Sing|PronType=Art	5	det	_	TokenRange=82:85
+5	Junge	Junge	NOUN	NN	Case=Nom|Gender=Masc|Number=Sing|Person=3	0	root	_	TokenRange=86:91
+6	mit	mit	ADP	APPR	AdpType=Prep|Case=Dat	8	case	_	TokenRange=92:95
+7	schlammigen	schlammig	ADJ	ADJA	Case=Dat|Degree=Pos|Number=Plur	8	amod	_	TokenRange=96:107
+8	Schuhen	Schuh	NOUN	NN	Case=Dat|Gender=Masc|Number=Plur|Person=3	5	nmod	_	SpaceAfter=No|TokenRange=108:115
+9	.	.	PUNCT	$.	PunctType=Peri	5	punct	_	SpacesAfter=\r\n|TokenRange=115:116
+
+# sent_id = 4
+# text = Die Verkehrspolizei von Shenzhen hat sich für unkonventionelle Strafen entschieden.
+1	Die	Die	DET	ART	Case=Nom|Gender=Fem|Number=Sing|PronType=Art	2	det	_	TokenRange=118:121
+2	Verkehrspolizei	Polizei	NOUN	NN	Gender=Fem|Number=Sing|Person=3	10	nsubj	_	TokenRange=122:137
+3	von	von	ADP	APPR	AdpType=Prep|Case=Dat	4	case	_	TokenRange=138:141
+4	Shenzhen	Shenzhen	NOUN	NN	Person=3	2	nmod	_	TokenRange=142:150
+5	hat	haben	AUX	VAFIN	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	_	TokenRange=151:154
+6	sich	sich	PRON	PRF	Case=Acc|Person=3|PronType=Prs|Reflex=Yes	10	obj	_	TokenRange=155:159
+7	für	für	ADP	APPR	AdpType=Prep|Case=Acc	9	case	_	TokenRange=160:163
+8	unkonventionelle	unkonventionelle	ADJ	ADJA	_	9	amod	_	TokenRange=164:180
+9	Strafen	Strafe	NOUN	NN	Gender=Fem|Number=Plur|Person=3	10	obl	_	TokenRange=181:188
+10	entschieden	entscheiden	VERB	VVPP	Aspect=Perf|VerbForm=Part	0	root	_	SpaceAfter=No|TokenRange=189:200
+11	.	.	PUNCT	$.	PunctType=Peri	10	punct	_	SpacesAfter=\r\n|TokenRange=200:201

@@ -1,0 +1,44 @@
+# sent_id = 1
+# text = Who are they?
+1	Who	who	PRON	WP	PronType=Int	0	root	_	TokenRange=0:3
+2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	cop	_	TokenRange=4:7
+3	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	1	nsubj	_	SpaceAfter=No|TokenRange=8:12
+4	?	?	PUNCT	.	_	1	punct	_	SpacesAfter=\r\n|TokenRange=12:13
+
+# sent_id = 2
+# text = A small town with two minarets glides by.
+1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	TokenRange=15:16
+2	small	small	ADJ	JJ	Degree=Pos	3	amod	_	TokenRange=17:22
+3	town	town	NOUN	NN	Number=Sing	7	nsubj	_	TokenRange=23:27
+4	with	with	ADP	IN	_	6	case	_	TokenRange=28:32
+5	two	two	NUM	CD	NumType=Card	6	nummod	_	TokenRange=33:36
+6	minarets	minaret	NOUN	NNS	Number=Plur	3	nmod	_	TokenRange=37:45
+7	glides	glide	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	TokenRange=46:52
+8	by	by	ADV	RB	_	7	advmod	_	SpaceAfter=No|TokenRange=53:55
+9	.	.	PUNCT	.	_	7	punct	_	SpacesAfter=\r\n|TokenRange=55:56
+
+# sent_id = 3
+# text = I was just a boy with muddy shoes.
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	TokenRange=58:59
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	_	TokenRange=60:63
+3	just	just	ADV	RB	_	5	advmod	_	TokenRange=64:68
+4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	TokenRange=69:70
+5	boy	boy	NOUN	NN	Number=Sing	0	root	_	TokenRange=71:74
+6	with	with	ADP	IN	_	8	case	_	TokenRange=75:79
+7	muddy	muddy	ADJ	JJ	Degree=Pos	8	amod	_	TokenRange=80:85
+8	shoes	shoe	NOUN	NNS	Number=Plur	5	nmod	_	SpaceAfter=No|TokenRange=86:91
+9	.	.	PUNCT	.	_	5	punct	_	SpacesAfter=\r\n|TokenRange=91:92
+
+# sent_id = 4
+# text = Shenzhen's traffic police have opted for unconventional penalties before.
+1	Shenzhen	Shenzhen	PROPN	NNP	Number=Sing	4	nmod:poss	_	SpaceAfter=No|TokenRange=94:102
+2	's	's	PART	POS	_	1	case	_	TokenRange=102:104
+3	traffic	traffic	NOUN	NN	Number=Sing	4	compound	_	TokenRange=105:112
+4	police	police	NOUN	NNS	Number=Plur	6	nsubj	_	TokenRange=113:119
+5	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	aux	_	TokenRange=120:124
+6	opted	opt	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	TokenRange=125:130
+7	for	for	ADP	IN	_	9	case	_	TokenRange=131:134
+8	unconventional	unconventional	ADJ	JJ	Degree=Pos	9	amod	_	TokenRange=135:149
+9	penalties	penalty	NOUN	NNS	Number=Plur	6	obl	_	TokenRange=150:159
+10	before	before	ADV	RB	_	6	advmod	_	SpaceAfter=No|TokenRange=160:166
+11	.	.	PUNCT	.	_	6	punct	_	SpacesAfter=\r\n|TokenRange=166:167

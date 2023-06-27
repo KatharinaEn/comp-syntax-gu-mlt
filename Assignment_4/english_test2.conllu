@@ -1,0 +1,59 @@
+
+# text = Who:<PRON> are:<AUX> they:<PRON> ?:<PUNCT>
+# analyses = 4
+# parsetree = (Utt (Utt (S (there Who) (be_V are) (NP (Pron they)))) (Punct '?'))
+# weight = 1.0000000000000003e-4
+1	Who	_	PRON	_	_	2	expl	_	_
+2	are	_	VERB	_	_	0	root	_	_
+3	they	_	PRON	_	_	2	nsubj	_	_
+4	?	_	PUNCT	_	_	2	punct	_	_
+
+
+
+# text = A:<DET> small:<ADJ> town:<NOUN> with:<ADP> two:<NUM> minarets:<NOUN> glides:<VERB> by:<ADV> .:<PUNCT>
+# analyses = 23
+# parsetree = (Utt (Utt (S (NP (NP (Det A) (CN (AP (A small)) (CN (N town)))) (NP_obl (Prep with) (NP (Num (Card two)) (NP (CN (N minarets)))))) (VP (VP (V glides)) (Adv by)))) (Punct '.'))
+# weight = 1.5625000000000007e-11
+1	A	_	DET	_	_	3	det	_	_
+2	small	_	ADJ	_	_	3	amod	_	_
+3	town	_	NOUN	_	_	7	nsubj	_	_
+4	with	_	ADP	_	_	6	case	_	_
+5	two	_	NUM	_	_	6	nummod	_	_
+6	minarets	_	NOUN	_	_	3	nmod	_	_
+7	glides	_	VERB	_	_	0	root	_	_
+8	by	_	ADV	_	_	7	advmod	_	_
+9	.	_	PUNCT	_	_	7	punct	_	_
+
+
+
+# text = I:<PRON> was:<AUX> just:<ADV> a:<DET> boy:<NOUN> with:<ADP> muddy:<ADJ> shoes:<NOUN> .:<PUNCT>
+# analyses = 25
+# parsetree = (Utt (Utt (S (there I) (be_V was) (AdV just) (NP (NP (Det a) (CN (N boy))) (NP_obl (Prep with) (NP (CN (AP (A muddy)) (CN (N shoes)))))))) (Punct '.'))
+# weight = 2.5000000000000017e-10
+1	I	_	PRON	_	_	2	expl	_	_
+2	was	_	VERB	_	_	0	root	_	_
+3	just	_	ADV	_	_	2	advmod	_	_
+4	a	_	DET	_	_	5	det	_	_
+5	boy	_	NOUN	_	_	2	nsubj	_	_
+6	with	_	ADP	_	_	8	case	_	_
+7	muddy	_	ADJ	_	_	8	amod	_	_
+8	shoes	_	NOUN	_	_	5	nmod	_	_
+9	.	_	PUNCT	_	_	2	punct	_	_
+
+
+
+# text = Shenzhen:<PROPN> 's:<PART> traffic:<NOUN> police:<NOUN> have:<AUX> opted:<VERB> for:<ADP> unconventional:<ADJ> penalties:<NOUN> before:<ADV> .:<PUNCT>
+# analyses = 18
+# parsetree = (Utt (Utt (S (NP (NP_poss (NP (PN Shenzhen)) ('s' 's')) (CN (N (N_one traffic) (N police)))) (have have) (VP (VP (V2 opted) (NP_obl (Prep for) (NP (CN (AP (A unconventional)) (CN (N penalties)))))) (Adv before)))) (Punct '.'))
+# weight = 6.250000000000007e-13
+1	Shenzhen	_	PROPN	_	_	4	nmod:poss	_	_
+2	's	_	PART	_	_	1	case	_	_
+3	traffic	_	NOUN	_	_	4	compound	_	_
+4	police	_	NOUN	_	_	6	nsubj	_	_
+5	have	_	AUX	_	_	6	aux	_	_
+6	opted	_	VERB	_	_	0	root	_	_
+7	for	_	ADP	_	_	9	case	_	_
+8	unconventional	_	ADJ	_	_	9	amod	_	_
+9	penalties	_	NOUN	_	_	6	obl	_	_
+10	before	_	ADV	_	_	6	advmod	_	_
+11	.	_	PUNCT	_	_	6	punct	_	_
