@@ -15,37 +15,37 @@ Utt ::= Num
 
 -- sentences
 S ::= NP VP # nsubj head
-S ::= NP VP neg # nsubj advmod head
+S ::= NP VP neg # nsubj head advmod
 S ::= NP have neg? VP  # nsubj aux advmod head
 S ::= NP cop neg? AdV? Comp # nsubj cop advmod advmod head
-S ::= NP cop neg? AdV? AdV? # head cop aux:pass advmod advmod
+S ::= NP cop neg? AdV? AdV? # head cop advmod advmod advmod
 S ::= there be_V  neg? AdV? NP # expl head advmod advmod nsubj
 S ::= it cop neg? AdV?  AP # expl cop advmod advmod head
 S ::= NP be_V neg? SC # nsubj head advmod ccomp
 S ::= S_front NP VS # parataxis nsubj head
 
 
-QS ::= aux NP neg? VP have? # aux nsubj advmod head advmod
+QS ::= aux NP neg? VP have? # aux nsubj advmod head aux
 QS ::= cop NP neg? Comp # cop nsubj advmod head
-QS ::= cop NP neg? VP_pass # aux:pass nsubj:pass advmod head
+QS ::= cop NP neg? VP_pass # cop nsubj:pass advmod head
 QS ::= IP neg VP # nsubj advmod head
-QS ::= IP have? neg? VP # nsubj advmod aux head
+QS ::= IP have? neg? VP # nsubj aux advmod head
 QS ::= IP cop neg? Comp # nsubj cop advmod head
-QS ::= IP have? NP neg? VPSlash # obj nsubj advmod aux head
-QS ::= IP cop neg? VP_pass # nsubj:pass aux:pass advmod head
+QS ::= IP have? NP neg? VPSlash # obj aux nsubj advmod head
+QS ::= IP cop neg? VP_pass # nsubj:pass cop advmod head
 QS ::= IAdv do NP neg? VP # advmod aux nsubj advmod head
-QS ::= IAdv cop NP neg? VP_pass # advmod aux:pass nsubj:pass advmod head
+QS ::= IAdv cop NP neg? VP_pass # advmod cop nsubj:pass advmod head
 
 
 -- indirect questions
-QS ::= IP does? NP neg? VPSlash # obj nsubj nsubj advmod head
+QS ::= IP does? NP neg? VPSlash # obj aux nsubj advmod head
 QS ::= IAdv NP do? neg? VP # advmod nsubj aux advmod head
-QS ::= IAdv have? NP neg? VP # advmod nsubj advmod aux head
-QS ::= IAdv cop NP neg? Comp # advmod nsubj cop advmod head
-RS ::= RP neg? VP have # nsubj aux advmod head
-RS ::= RP NP neg? Comp cop # nsubj cop nsubj advmod head
+QS ::= IAdv have? NP neg? VP # advmod aux nsubj advmod head
+QS ::= IAdv cop NP neg? Comp # advmod cop nsubj advmod head
+RS ::= RP neg? VP have # nsubj advmod head aux
+RS ::= RP NP neg? Comp cop # nsubj nsubj advmod head cop
 RS ::= RP NP neg VPSlash # obj nsubj advmod head
-RS ::= NP neg VPSlash do  # nsubj aux advmod head
+RS ::= NP neg VPSlash do  # nsubj advmod head aux
 
 
 -- imperatives
@@ -92,7 +92,7 @@ Comp ::= Comp comma? Adv # head punct advmod
 
 -- VP with to
 VP_to ::= neg? to VP # advmod mark head
-VP_to ::= cop neg? to Comp # advmod mark cop head
+VP_to ::= cop neg? to Comp # cop advmod mark head
 
 -- noun phrases
 NP ::= PN
@@ -116,6 +116,9 @@ NP        ::= Det CN_quoted # det head
 CN_quoted ::= quote CN quote # punct head punct
 Num ::= Card
 Num ::= Digits
+NP_appos  ::= Punct_appos NP # punct head
+Num ::= Card
+Num ::= Digits
 
 CN ::= N
 CN ::= AP CN # amod head
@@ -131,6 +134,50 @@ AP ::= AdA AP     # advmod head
 AP ::= AP NP_obl  # head nmod
 
 
+S_sub       ::= comma? Subj S # punct mark head
+S_subcomma  ::= Subj S comma? # mark head punct
+Adv_comma   ::= Adv comma? # head punct
+NP_oblcomma ::= NP_obl comma? # head punct
+S_sub       ::= comma? Subj VP # punct mark head # 0.1
+S_subcomma  ::= Subj VP comma? # mark head punct # 0.1
+
+-- coordination
+S       ::= Conj_pre? ListS S_conj # cc:preconj head conj
+ListS   ::= S
+ListS   ::= ListS S_comma # head conj
+S_conj  ::= comma? Conj S # punct cc head
+S_comma ::= comma S # punct head
+
+NP       ::= Conj_pre? ListNP NP_conj # cc:preconj head conj
+ListNP   ::= NP
+ListNP   ::= ListNP NP_comma # head conj
+NP_conj  ::= comma? Conj NP # punct cc head
+NP_comma ::= comma NP # punct head
+
+AP       ::= Conj_pre? ListAP AP_conj # cc:preconj head conj
+ListAP   ::= AP
+ListAP   ::= ListAP AP_comma # head conj
+AP_conj  ::= comma? Conj AP # punct cc head
+AP_comma ::= comma AP # punct head
+
+VP       ::= Conj_pre? ListVP VP_conj # cc:preconj head conj
+ListVP   ::= VP
+ListVP   ::= ListVP VP_comma # head conj
+VP_conj  ::= comma? Conj VP # punct cc head
+VP_comma ::= comma VP # punct head
+
+-- in Adv conjunctions, we want to include NP_obl parts: all that matters for UD is the category of the first conjunct
+Adv       ::= Conj_pre? ListAdv Adv_conj # cc:preconj head conj
+ListAdv   ::= Adv
+ListAdv   ::= ListAdv Adv_comma # head conj
+Adv_conj  ::= comma? Conj Adv # punct cc head
+Adv_conj  ::= comma? Conj NP_obl # punct cc head
+Adv_comma ::= comma Adv # punct head
+Adv_comma ::= comma NP_obl # punct head
+
+NP_obl     ::= Conj_pre? ListNP_obl Adv_conj # cc:preconj head conj
+ListNP_obl ::= NP_obl
+ListNP_obl ::= ListNP_obl Adv_comma # head conj
 
 
 
