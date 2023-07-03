@@ -36,10 +36,10 @@ resource MicroResGer = {
 
  
     smartNoun : Str -> Gender -> Noun = \sg,g -> case sg of {
-      x + ("p" |"b" |"m" |"f" |"v" |"s" | "z" |"l" |"j" |"g" |"l") => mkNoun sg (sg +"s") sg sg (sg + "ä" + "e") (sg + "ä" + "e") (sg + "ä" + "en") (sg + "ä" + "e") g ; 
+      x + ("p" |"b" |"m" |"v" |"s" | "z" |"l" |"j" |"g" |"l") => mkNoun sg (sg +"s") sg sg (sg + "ä" + "e") (sg + "ä" + "e") (sg + "ä" + "en") (sg + "ä" + "e") g ; 
       x + ( "en" | "k" | "sch" | "u") => mkNoun sg (sg + "en") (sg+"en") (sg+"en")(sg+"en") (sg+"en")(sg+"en")(sg+"en") g ; 
       x + ("s") => mkNoun sg (sg + "s") sg sg (sg+ "s") (sg +"s") (sg +"s") (sg +"s") g ;
-      x + ("e"| "ch" | "t" | "n" | "r" | "d" | "n" ) => mkNoun sg (sg + "s") sg sg (sg + "e") (sg + "e") (sg + "en") (sg + "e") g ; 
+      x + ("e"| "ch" | "t" | "n" | "r" | "d" | "n" | "f"  ) => mkNoun sg (sg + "s") sg sg (sg + "e") (sg + "e") (sg + "en") (sg + "e") g ; 
       _ => mkNoun sg (sg +"s") sg sg sg sg (sg + "n") sg g                 
     } ;
 
